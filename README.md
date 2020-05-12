@@ -69,5 +69,51 @@ WordClound=Analysis.WordCloud(data,'description')
 
 ```
 
+## DataBase Connection 
+
+```python
+
+from vennam.DataBase import create_engine
+
+connection=create_engine(user,password,host,port,database)
+
+
+```
+
+## Example 
+
+```python
+
+from vennam.DataBase import create_engine
+
+connection=create_engine(user="VVVVV",
+        password="VVVVV",
+        host="VVVVV",
+        port="VVVVV",
+        database="VVVVV")
+		
+```
+
+
+## Dumping DataFrame into existing database table 
+
+```python
+
+from vennam.DataBase import insert_dict
+
+Data_dump=insert_dict(connection,schemaname,tablename,dataframe)
+
+```
+
+## Example 
+
+```python 
+
+from vennam.DataBase import insert_dict
+
+Data_dump=insert_dict(schemaname="VVVVV",tablename="VVVVV",connection=connection,dataframe=dataframe) 
+
+```
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
